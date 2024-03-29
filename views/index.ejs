@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Short URL Creator</title>
+    <link rel="stylesheet" href="/css/hack.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="hack">
+    <div style="margin: 1%;  height: 300pt;  position: relative;">
+        <div style="/*! background-color: red; */position: absolute;top: 50%;transform: translate(-50%, -50%);left: 50%;width: 200pt;outline: dashed 1px black;padding: 15px;">
+        <form action="/shorten">
+            <label for="url">URL to shorten:</label>
+            <br>
+            <input type="text" id="url" name="url" style="width: 100%;">
+            <br>
+            <label for="location">Location:</label>
+            <br>
+            <input type="text" id="location" name="location" style="width: 100%;">
+            <br>
+            <br>
+            <label for="style">Style:</label>
+            <div>
+                <input type="radio" id="1" name="style" value="1" style="margin-left: 12.5%;">
+                <label for="1">Style 1</label>
+                <input type="radio" id="2" name="style" value="2" style="margin-left: 12.5%;">
+                <label for="2">Style 2</label>
+            </div>
+            <input type="submit" value="Submit" style="padding: 2px 4px; outline: none; background-color: transparent;font-family: Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif !important; margin-top: 10pt;">
+            <% if (base64QR) { %>
+            <a download="<%= id %>.png" href="<%= base64QR %>", style="position:absolute;left: 50%;transform: translate(100%,100%);">Download</a>
+            <% } %>
+        </form>
+        </div>
+    </div>
+    <% if (base64QR) { %>
+    <div style="margin-top: 60pt;  position: relative;">
+        <div style="position: absolute;top: 50%;transform: translate(-50%, -50%);left: 50%;">
+            <img width="300px" height="300px" src="<%= base64QR %>"></img>
+        </div>
+    </div>
+    <% } %>
+</body>
+</html>

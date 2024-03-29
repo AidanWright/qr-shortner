@@ -1,0 +1,34 @@
+{
+  "redirects": [
+    {
+      "url": "https://www.google.com",
+      "id": "p5c0Gsmqu",
+      "location": "ITE",
+      "style": "1"
+    },
+    {
+      "url": "https://www.google.com",
+      "id": "ICAhagbf_",
+      "location": "ITEE",
+      "style": "1"
+    },
+    {
+      "url": "https://www.google.com",
+      "id": "f5GFGJoHH",
+      "location": "N/A",
+      "style": 1
+    },
+    {
+      "url": "http://www.uconn.edu",
+      "id": "kAYi_x_jq",
+      "location": "McHugh",
+      "style": "2"
+    },
+    {
+      "url": "https://visitors.uconn.edu",
+      "id": "k3JsRYK8R",
+      "location": "Busby",
+      "style": "2"
+    }
+  ]
+}
